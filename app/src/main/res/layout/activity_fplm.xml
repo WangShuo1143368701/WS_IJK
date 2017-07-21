@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ws.ijk.ws_ijk.FPLMActivity">
+
+    <com.ws.ijk.wsqj_ijkplayer.widget.LianMaiSplitScreen.LMFlowGroupView
+        android:id="@+id/LMFlowGroupView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ws.ijk.wsqj_ijkplayer.widget.LianMaiSplitScreen.AspectTextureView
+            android:id="@+id/txv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.ws.ijk.wsqj_ijkplayer.widget.LianMaiSplitScreen.LMFlowGroupView>
+
+
+    <Button
+        android:id="@+id/LM"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:text="连麦"/>
+
+    <Button
+        android:id="@+id/LMHF"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_height="wrap_content"
+        android:text="恢复"/>
+
+</FrameLayout>

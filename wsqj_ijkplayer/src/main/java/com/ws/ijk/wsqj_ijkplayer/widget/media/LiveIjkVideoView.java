@@ -529,7 +529,7 @@ public class LiveIjkVideoView extends FrameLayout implements MediaController.Med
                      * if we're attached to a window. When we're going away and no
                      * longer have a window, don't bother showing the user an error.
                      */
-              /*      if (getWindowToken() != null) {
+                  /*  if (getWindowToken() != null) {
                         Resources r = mAppContext.getResources();
                         int messageId;
 
@@ -555,7 +555,7 @@ public class LiveIjkVideoView extends FrameLayout implements MediaController.Med
                                 .setCancelable(false)
                                 .show();
                     }*/
-                    return true;
+                    return false;
                 }
             };
 
@@ -889,7 +889,7 @@ public class LiveIjkVideoView extends FrameLayout implements MediaController.Med
             IRenderView.AR_16_9_FIT_PARENT,
             IRenderView.AR_4_3_FIT_PARENT};
     private int mCurrentAspectRatioIndex = 0;
-    private int mCurrentAspectRatio = s_allAspectRatio[0];
+    private int mCurrentAspectRatio = s_allAspectRatio[1];
 
     public int toggleAspectRatio() {
         mCurrentAspectRatioIndex++;
@@ -1048,13 +1048,12 @@ public class LiveIjkVideoView extends FrameLayout implements MediaController.Med
                     //added by wangshuo start
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_CODEC, "skip_loop_filter", 0);//48
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_CODEC, "skip_frame", 0);
-
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "max_cached_duration", 3000);
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "infbuf", 1);
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "packet-buffering", 0);
 
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "probsize", 1);
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "analyzeduration", 1);
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "probsize", 1);//对应avformat_find_stream_info(pFormatCtx,NULL)优化
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "analyzeduration", 1);// 对应avformat_find_stream_info(pFormatCtx,NULL)优化
                     //added by wangshuo end
                 }
                 mediaPlayer = ijkMediaPlayer;

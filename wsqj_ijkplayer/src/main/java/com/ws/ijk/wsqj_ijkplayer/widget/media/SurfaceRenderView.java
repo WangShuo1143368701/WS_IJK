@@ -19,6 +19,7 @@ package com.ws.ijk.wsqj_ijkplayer.widget.media;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.PixelFormat;
 import android.graphics.SurfaceTexture;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -73,6 +74,7 @@ public class SurfaceRenderView extends SurfaceView implements IRenderView {
         getHolder().addCallback(mSurfaceCallback);
         //noinspection deprecation
         getHolder().setType(SurfaceHolder.SURFACE_TYPE_NORMAL);
+        getHolder().setFormat(PixelFormat.TRANSLUCENT);//added by wangshuo for Flash black
     }
 
     @Override

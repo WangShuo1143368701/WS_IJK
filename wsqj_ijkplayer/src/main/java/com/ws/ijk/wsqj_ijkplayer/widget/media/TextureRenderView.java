@@ -19,6 +19,7 @@ package com.ws.ijk.wsqj_ijkplayer.widget.media;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.SurfaceTexture;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -74,6 +75,7 @@ public class TextureRenderView extends TextureView implements IRenderView {
         mMeasureHelper = new MeasureHelper(this);
         mSurfaceCallback = new SurfaceCallback(this);
         setSurfaceTextureListener(mSurfaceCallback);
+        setBackgroundColor(Color.parseColor("#00000000"));//added by wangshuo for Flash black
     }
 
     @Override

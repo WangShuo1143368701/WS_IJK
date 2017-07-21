@@ -1,9 +1,7 @@
 package com.ws.ijk.ws_ijk;
 
-import android.app.Activity;
-import android.hardware.Camera;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,7 +12,7 @@ import com.ws.ijk.wsqj_ijkplayer.widget.media.LiveIjkVideoView;
 import butterknife.ButterKnife;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 
-public class MainActivity extends Activity implements IMediaPlayer.OnInfoListener, IMediaPlayer.OnPreparedListener, IMediaPlayer.OnCompletionListener, IMediaPlayer.OnErrorListener, View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements IMediaPlayer.OnInfoListener, IMediaPlayer.OnPreparedListener, IMediaPlayer.OnCompletionListener, IMediaPlayer.OnErrorListener, View.OnClickListener {
 
     private LiveIjkVideoView liveIjkVideoView ,lmIjkVideoView;
     private ImageView imageView,lmCoverView,lmCloseView;
@@ -28,7 +26,7 @@ public class MainActivity extends Activity implements IMediaPlayer.OnInfoListene
         initView();
         init();
 
-        DisplayMetrics dm=new DisplayMetrics();
+      /*  DisplayMetrics dm=new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         String s="屏幕的分辨率为："+dm.widthPixels+"*"+dm.heightPixels;
         Log.e("wangshuo",s);
@@ -50,7 +48,7 @@ public class MainActivity extends Activity implements IMediaPlayer.OnInfoListene
 
 
         boolean b = CameraUtil.isTablet(this);
-        Log.e("wangshuo","b : "+b);
+        Log.e("wangshuo","b : "+b);*/
     }
 
 
@@ -85,7 +83,7 @@ public class MainActivity extends Activity implements IMediaPlayer.OnInfoListene
 
 
         //added LM start
-        lmIjkVideoView.setVideoPath("http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f30.mp4");
+        lmIjkVideoView.setVideoPath("https://raw.githubusercontent.com/danikula/AndroidVideoCache/master/files/orange1.mp4");
         lmIjkVideoView.start();
 
         lmCoverView.setImageResource(R.mipmap.timg);

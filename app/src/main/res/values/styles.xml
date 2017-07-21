@@ -3,12 +3,12 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
-        <item name="android:background">@mipmap/lobby_qidongye</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
+
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+   <!--<item name="android:windowFullscreen">true</item>-->
 
     <!-- 所有界面主题的根类 -->
     <style name="Theme" parent="@android:style/Theme">
@@ -19,7 +19,6 @@
 
     </style>
 
-    <!-- 所有Activity的样式 -->
-    <style name="Theme.Activity"></style>
+
 
 </resources>

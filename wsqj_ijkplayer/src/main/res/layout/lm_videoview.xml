@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+            <com.ws.ijk.wsqj_ijkplayer.widget.media.LiveIjkVideoView
+                android:id="@+id/lm_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <ImageView
+                android:id="@+id/lm_play_coverview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+            <ImageView
+                android:id="@+id/lm_play_closeview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                />
+</FrameLayout>

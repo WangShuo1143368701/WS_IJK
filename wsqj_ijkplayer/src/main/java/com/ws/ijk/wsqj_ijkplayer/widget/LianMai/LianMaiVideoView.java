@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import com.ws.ijk.wsqj_ijkplayer.widget.media.LiveIjkVideoView;
 
 /**
- * Created by WangShuo on 2017/6/29.
+ * Created by WangShuo on 2017/7/20.
  */
 
 public class LianMaiVideoView extends FrameLayout {

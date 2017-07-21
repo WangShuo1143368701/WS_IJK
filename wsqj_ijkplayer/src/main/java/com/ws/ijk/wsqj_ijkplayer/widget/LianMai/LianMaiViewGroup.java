@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 /**
- * Created by WangShuo on 2017/6/29.
+ * Created by WangShuo on 2017/7/20.
  */
 
 public class LianMaiViewGroup extends FrameLayout {
